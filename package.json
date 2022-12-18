@@ -1,0 +1,29 @@
+{
+  "name": "acron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PitiMonster/Acron.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PitiMonster/Acron/issues"
+  },
+  "homepage": "https://github.com/PitiMonster/Acron#readme",
+  "devDependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "@vercel/ncc": "^0.36.0"
+  },
+  "dependencies": {
+    "@octokit/action": "^4.0.10"
+  }
+}

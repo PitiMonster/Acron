@@ -1,0 +1,27 @@
+name: "Acron integration"
+decription: "This action integrates Acron into your CI"
+branding:
+  icon: activity
+  color: green
+
+inputs:
+  number:
+    description: "ID or Pull Request of Issue"
+    required: true
+  apiKey:
+    description: "Your Acron api key"
+    required: false
+  mode:
+    description: "Mode"
+    required: true
+    default: "pr"
+  split:
+    description: "Should I split the prompt and how to split it"
+    required: true
+    default: "yolo"
+outputs:
+  comment:
+    description: "The comment from Acron"
+runs:
+  using: "node16"
+  main: "dist/index.js"
