@@ -4,6 +4,10 @@ branding:
   icon: activity
   color: green
 
+on:
+  pull_request:
+    types: [opened]
+
 inputs:
   number:
     description: "ID or Pull Request of Issue"
