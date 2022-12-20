@@ -1,0 +1,17 @@
+on: [pull_request]
+
+name: Test Acron
+
+jobs:
+  acron_comment:
+    runs-on: ubuntu-latest
+    name: Let Acron check your code
+    steps:
+      - name: Acron comment
+        uses: pitimonster/acron@HEAD
+        id: hello
+        with:
+          number: ${{ github.event.pull_request.number }}
+          split: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
