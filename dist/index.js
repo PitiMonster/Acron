@@ -13357,7 +13357,6 @@ function wrappy (fn, cb) {
 /***/ 1499:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-/* module decorator */ module = __nccwpck_require__.nmd(module);
 const core = __nccwpck_require__(2186);
 const { Octokit } = __nccwpck_require__(1231);
 const github = __nccwpck_require__(5438);
@@ -13390,7 +13389,7 @@ async function sendPRToAcron({ repo, owner, number, split }) {
   console.log("DIFF: ", diff);
 }
 
-module.export = { sendPRToAcron };
+module.exports = { sendPRToAcron };
 
 
 /***/ }),
@@ -13561,8 +13560,8 @@ module.exports = JSON.parse('[[[0,44],"disallowed_STD3_valid"],[[45,46],"valid"]
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			id: moduleId,
-/******/ 			loaded: false,
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
 /******/ 	
@@ -13575,23 +13574,11 @@ module.exports = JSON.parse('[[[0,44],"disallowed_STD3_valid"],[[45,46],"valid"]
 /******/ 			if(threw) delete __webpack_module_cache__[moduleId];
 /******/ 		}
 /******/ 	
-/******/ 		// Flag the module as loaded
-/******/ 		module.loaded = true;
-/******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/node module decorator */
-/******/ 	(() => {
-/******/ 		__nccwpck_require__.nmd = (module) => {
-/******/ 			module.paths = [];
-/******/ 			if (!module.children) module.children = [];
-/******/ 			return module;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/compat */
 /******/ 	
 /******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";

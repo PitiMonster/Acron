@@ -30,4 +30,4 @@ async function sendPRToAcron({ repo, owner, number, split }) {
   console.log("DIFF: ", diff);
 }
 
-module.export = { sendPRToAcron };
+module.exports = { sendPRToAcron };
