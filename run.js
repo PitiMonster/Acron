@@ -12,7 +12,6 @@ async function sendPRToAcron({ repo, owner, number, split }) {
     owner,
     repo,
     pull_number: number,
-    mediaType: { format: "diff" },
   });
   console.log(
     "----------------------------------------------------------------"
