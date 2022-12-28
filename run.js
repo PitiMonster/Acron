@@ -26,10 +26,7 @@ async function sendPRToAcron({ repo, owner, number, split }) {
     "----------------------------------------------------------------"
   );
 
-  console.log("BODY: ", data.data.body);
-  console.log("BASE: ", data.data.base);
-  console.log("CHANGED FILES: ", data.data.changed_files);
-  console.log("HTML URL: ", data.data.html_url);
+  console.log("DATA: ", data.data);
 }
 
 module.exports = { sendPRToAcron };
