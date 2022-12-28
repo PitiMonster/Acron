@@ -13367,11 +13367,10 @@ async function sendPRToAcron({ repo, owner, number, split }) {
   const {
     data: { title, body },
   } = await octokit.pulls.get({ owner, repo, pull_number: number });
-  const { data: diff } = await octokit.rest.pulls.get({
+  const data = await octokit.rest.pulls.get({
     owner,
     repo,
     pull_number: number,
-    mediaType: { format: "diff" },
   });
   console.log(
     "----------------------------------------------------------------"
@@ -13386,7 +13385,10 @@ async function sendPRToAcron({ repo, owner, number, split }) {
     "----------------------------------------------------------------"
   );
 
-  console.log("DIFF: ", diff);
+  console.log("BODY: ", data.data.body);
+  console.log("BASE: ", data.data.base);
+  console.log("CHANGED FILES: ", data.data.changed_files);
+  console.log("HTML URL: ", data.data.html_url);
 }
 
 module.exports = { sendPRToAcron };
